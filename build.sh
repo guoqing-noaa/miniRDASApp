@@ -136,15 +136,7 @@ else
   exit 1
 fi
 
-# Link in MPAS-JEDI test data
-if [[ $DYCORE == 'MPAS' || $DYCORE == 'FV3andMPAS' ]]; then
-  # Link in case data
-  echo "Linking in test data for MPAS-JEDI case"
-  $dir_root/rrfs-test/scripts/link_mpasjedi_expr.sh
-  $dir_root/rrfs-test/scripts/link_fv3jedi_expr.sh
-fi
-
-CMAKE_OPTS+=" -DMPIEXEC_MAX_NUMPROCS:STRING=120 -DBUILD_SUPER_EXE=$BUILD_SUPER_EXE"
+CMAKE_OPTS+=" -DMPIEXEC_MAX_NUMPROCS:STRING=120"
 # Configure
 echo "Configuring ..."
 set -x

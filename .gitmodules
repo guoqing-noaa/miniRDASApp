@@ -33,6 +33,11 @@
 	url = https://github.com/jcsda/ufo
 	branch = develop
 	ignore = all
+[submodule "sorc/vader"]
+	path = sorc/vader
+	url = https://github.com/jcsda/vader
+	branch = develop
+	ignore = all
 [submodule "sorc/mpas"]
 	path = sorc/mpas
 	url = https://github.com/NOAA-GSL/MPAS-Model

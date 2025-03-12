@@ -73,15 +73,15 @@ if(BUILD_RDASBUNDLE)
   ecbuild_bundle( PROJECT oops SOURCE "../sorc/oops" )
   ecbuild_bundle( PROJECT vader SOURCE "../sorc/vader" )
   ecbuild_bundle( PROJECT saber SOURCE "../sorc/saber" )
-  option(ENABLE_IODA_DATA "Obtain ioda test data from ioda-data repository (vs tarball)" OFF)
+  option(ENABLE_IODA_DATA "Obtain ioda test data from ioda-data repository (vs tarball)" ON)
   ecbuild_bundle( PROJECT ioda SOURCE "../sorc/ioda" )
-  option(ENABLE_UFO_DATA "Obtain ufo test data from ufo-data repository (vs tarball)" OFF)
+  option(ENABLE_UFO_DATA "Obtain ufo test data from ufo-data repository (vs tarball)" ON)
   ecbuild_bundle( PROJECT ufo SOURCE "../sorc/ufo" )
 
   set(MPAS_DOUBLE_PRECISION "ON" CACHE STRING "MPAS-Model: Use double precision 64-bit Floating point.")
   set(MPAS_CORES init_atmosphere atmosphere CACHE STRING "MPAS-Model: cores to build.")
   ecbuild_bundle( PROJECT MPAS SOURCE "../sorc/mpas" )
-  option(ENABLE_MPAS_JEDI_DATA "Obtain mpas-jedi test data from mpas-jedi-data repository (vs tarball)" OFF)
+  option(ENABLE_MPAS_JEDI_DATA "Obtain mpas-jedi test data from mpas-jedi-data repository (vs tarball)" ON)
   ecbuild_bundle( PROJECT mpas-jedi SOURCE "../sorc/mpas-jedi" )
 
 # Build IODA converters
